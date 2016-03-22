@@ -1,6 +1,5 @@
 'use strict';
 
-let jwt = require('jsonwebtoken');
 let User = require('../models/user');
 
 module.exports = (router) => {

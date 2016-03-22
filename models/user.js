@@ -32,7 +32,7 @@ userSchema.methods.compareHash = function(password) {
 }
 
 userSchema.methods.generateToken = function() {
-  jwt.sign({ _id: this._id}, 'CHANGE ME');
+  return jwt.sign({ _id: this._id}, 'CHANGE ME');
 }
 
 module.exports = mongoose.model('User', userSchema);
