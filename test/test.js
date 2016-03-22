@@ -7,7 +7,7 @@ chai.use(chaihttp);
 var expect = chai.expect;
 var request = chai.request;
 
-process.env.MONGOLAB_URI = 'mongodb://localhost/';
+process.env.MONGOLAB_URI = 'mongodb://localhost/test';
 require('../server.js');
 
 describe('post route', function() {

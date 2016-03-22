@@ -31,7 +31,7 @@ module.exports = (router) => {
     });
   })
 
-  .delete('users/:user', (req, res) => {
+  .delete('/users/:user', (req, res) => {
     var userId = req.params.user;
     User.findOne({_id: userId}, function(err, user) {
       if (err){
@@ -42,8 +42,9 @@ module.exports = (router) => {
     });
   })
 
-  .get('users/', (req, res) => {
+  .get('/users', (req, res) => {
     User.find({}, function(err, data) {
+      console.log('get route hit')
       if (err) {
         res.status(500).json({msg: 'Internal Server Error'});
       }
@@ -51,7 +52,7 @@ module.exports = (router) => {
     });
   })
 
-  .get('users/:user', (req, res) => {
+  .get('/users/:user', (req, res) => {
     var userId = req.params.user;
     User.findOne({_id: userId}, function(err, user) {
       if (err) {
